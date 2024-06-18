@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link href="./css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/ejercicio-pagina.css">
+</head>
+
+<body>
+
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Mate Mundo</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+        aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarScroll">
+        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="index.html"><i class="fa-solid fa-house fs-5"></i>
+              Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./info.html" target="_self"><i class="fa-solid fa-circle-info fs-5"></i>
+              Información</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./glosario.html" tabindex="_self"><i class="fa-solid fa-clipboard-list fs-5"></i>
+              Glosario</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./videos.html" tabindex="_self"><i class="fa-brands fa-youtube fs-5"></i>
+              Videos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./juegos.html" tabindex="_self"><i
+                class="fa-solid fa-gamepad fs-5"></i>
+              Juego</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#" tabindex="_self"><i class="fa-solid fa-calculator fs-5"></i>
+              Ejercicios</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+
+  <div class="container">
+    <h2><strong>Ejercicios de Operaciones Matemáticas</strong></h2>
+    <section class="container-operadores">
+      <button id="suma" onclick="btnSumar()">
+        <i class="fa-solid fa-plus"></i>
+      </button>
+      <button id="resta" onclick="btnResta()">
+        <i class="fa-solid fa-minus"></i>
+      </button>
+      <button id="producto" onclick="btnProducto()">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <button id="division" onclick="btnDivision()">
+        <i class="fa-solid fa-divide"></i>
+      </button>
+      <button id="combinado" onclick="btnCombinado()">
+        <div class="arriba"><i class="fa-solid fa-plus"></i>
+          <i class="fa-solid fa-minus"></i>
+        </div>
+        <div class="abajo"><i class="fa-solid fa-xmark"></i>
+          <i class="fa-solid fa-divide"></i>
+        </div>
+      </button>
+    </section>
+
+
+    <section class="container-operacion">
+      <span id="num1"></span>
+      <span id="operacion"></span>
+      <span id="num2"></span>
+      <span id="combinados"></span>
+      <span> = </span>
+      <input type="text" id="respuesta_usuario">
+      <button id="corregir" onclick="corregir()">Corregir</button>
+
+    </section>
+
+    <section id="msj_correccion">
+
+    </section>
+  </div>
+
+
+
+  <script src="./js/ejercicios.js"></script>
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <script src="./js/all.min.js"></script>
+</body>
+
+</html>

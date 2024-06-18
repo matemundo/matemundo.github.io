@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juego</title>
+  <link rel="stylesheet" href="./css/all.min.css" />
+  <link href="./css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/juegos.css">
+  <link rel="stylesheet" href="./css/estrella-fondo.css">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Mate Mundo</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+        aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarScroll">
+        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="./index.html" target="_self"><i
+                class="fa-solid fa-house fs-5"></i>
+              Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./info.html" target="_self"><i class="fa-solid fa-circle-info fs-5"></i>
+              Información</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./glosario.html" tabindex="_self"><i class="fa-solid fa-clipboard-list fs-5"></i>
+              Glosario</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./videos.html" tabindex="_self"><i class="fa-brands fa-youtube fs-5"></i>
+              Videos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="./juegos.html" tabindex="_self"><i class="fa-solid fa-gamepad fs-5"></i>
+              Juegos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./ejercicios.html" tabindex="_self"><i class="fa-solid fa-calculator fs-5"></i>
+              Ejercicios</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+
+
+
+  <div class="fondo-star">
+    <div id='stars'></div>
+    <div id='stars2'></div>
+    <div id='stars3'></div>
+  </div>
+  <canvas id="canva1" class="border border-4 border-dark rounded"></canvas>
+  <div class="test-wraper d-flex flex-column justify-content-center align-items-center d-none">
+    <button class="start btn btn-primary mb-3">
+      Reiniciar
+    </button>
+    <p class="descripcion h6">Resuelve el siguiente ejercicio para descubrir tu puntaje total</p>
+    <div class="input-group my-3 mx-5 w-50" aria-describedby="passwordHelpBlock">
+      <input type="text" class="form-control" placeholder="Respuesta" aria-label="Respuesta"
+        aria-describedby="button-addon2">
+      <button class="btn btn-success" type="button" id="button-addon2">Corregir</button>
+      <div id="passwordHelpBlock" class="form-text">
+        Tu respuesta debe ir sin "." ni ","
+      </div>
+
+    </div>
+    <h2 class="test"></h2>
+  </div>
+  <img src="./img/m_Mapachegame.png" id="player">
+  <img src="./img/backgroundLayers/layer-5.png" id="layer5">
+  <img src="./img/backgroundLayers/layer-4.png" id="layer4">
+  <img src="./img/backgroundLayers/layer-3.png" id="layer3">
+  <img src="./img/backgroundLayers/layer-2.png" id="layer2">
+  <img src="./img/backgroundLayers/layer-1.png" id="layer1">
+  <img src="./img/enemies/enemy_fly.png" id="enemy_fly">
+
+  <img src="./img/gusanos/60/g1.png" id="enemy_plant" class="gusano">
+  <img src="./img/gusanos/60/g3.png" id="enemy_plant" class="gusano">
+  <img src="./img/gusanos/60/g4.png" id="enemy_plant" class="gusano">
+  <img src="./img/gusanos/60/g5.png" id="enemy_plant" class="gusano">
+  <img src="./img/gusanos/60/g6.png" id="enemy_plant" class="gusano">
+  <img src="./img/gusanos/60/g7.png" id="enemy_plant" class="gusano">
+  <img src="./img/gusanos/60/g8.png" id="enemy_plant" class="gusano">
+  <img src="./img/gusanos/60/g9.png" id="enemy_plant" class="gusano">
+  <img src="./img/gusanos/60/g10.png" id="enemy_plant" class="gusano">
+  <img src="./img/gusanos/60/g11.png" id="enemy_plant" class="gusano">
+  <img src="./img/gusanos/60/g12.png" id="enemy_plant" class="gusano">
+  <img src="./img/gusanos/60/g13.png" id="enemy_plant" class="gusano">
+  <img src="./img/gusanos/60/g14.png" id="enemy_plant" class="gusano">
+  <img src="./img/gusanos/60/g15.png" id="enemy_plant" class="gusano">
+  <img src="./img/gusanos/60/g16.png" id="enemy_plant" class="gusano">
+  <img src="./img/gusanos/60/g17.png" id="enemy_plant" class="gusano">
+  <img src="./img/gusanos/60/g18.png" id="enemy_plant" class="gusano">
+  <img src="./img/gusanos/60/g19.png" id="enemy_plant" class="gusano">
+  <img src="./img/gusanos/60/g20.png" id="enemy_plant" class="gusano">
+  <img src="./img/gusanos/60/g21.png" id="enemy_plant" class="gusano">
+  <img src="./img/gusanos/60/g22.png" id="enemy_plant" class="gusano">
+  <img src="./img/gusanos/60/g23.png" id="enemy_plant" class="gusano">
+  <img src="./img/gusanos/60/g24.png" id="enemy_plant" class="gusano">
+  <img src="./img/gusanos/60/g25.png" id="enemy_plant" class="gusano">
+  <img src="./img/gusanos/60/g26.png" id="enemy_plant" class="gusano">
+  <img src="./img/gusanos/60/g27.png" id="enemy_plant" class="gusano">
+  <img src="./img/gusanos/60/g28.png" id="enemy_plant" class="gusano">
+  <img src="./img/gusanos/60/g29.png" id="enemy_plant" class="gusano">
+  <img src="./img/gusanos/60/g30.png" id="enemy_plant" class="gusano">
+  <img src="./img/gusanos/60/g31.png" id="enemy_plant" class="gusano">
+  <img src="./img/gusanos/60/g32.png" id="enemy_plant" class="gusano">
+  <img src="./img/gusanos/60/g33.png" id="enemy_plant" class="gusano">
+  <img src="./img/gusanos/60/g34.png" id="enemy_plant" class="gusano">
+  <img src="./img/gusanos/60/g35.png" id="enemy_plant" class="gusano">
+  <img src="./img/gusanos/60/g36.png" id="enemy_plant" class="gusano">
+  <img src="./img/gusanos/60/g37.png" id="enemy_plant" class="gusano">
+  <img src="./img/gusanos/60/g38.png" id="enemy_plant" class="gusano">
+  <img src="./img/gusanos/60/g39.png" id="enemy_plant" class="gusano">
+  <img src="./img/gusanos/60/g40.png" id="enemy_plant" class="gusano">
+  <img src="./img/gusanos/60/g41.png" id="enemy_plant" class="gusano">
+  <img src="./img/gusanos/60/g42.png" id="enemy_plant" class="gusano">
+  <img src="./img/gusanos/60/g43.png" id="enemy_plant" class="gusano">
+  <img src="./img/gusanos/60/g44.png" id="enemy_plant" class="gusano">
+  <img src="./img/gusanos/60/g45.png" id="enemy_plant" class="gusano">
+  <img src="./img/gusanos/60/g46.png" id="enemy_plant" class="gusano">
+  <img src="./img/gusanos/60/g47.png" id="enemy_plant" class="gusano">
+  <img src="./img/gusanos/60/g48.png" id="enemy_plant" class="gusano">
+  <img src="./img/gusanos/60/g49.png" id="enemy_plant" class="gusano">
+  <img src="./img/gusanos/60/g50.png" id="enemy_plant" class="gusano">
+  <img src="./img/gusanos/60/g51.png" id="enemy_plant" class="gusano">
+  <img src="./img/gusanos/60/g52.png" id="enemy_plant" class="gusano">
+  <img src="./img/gusanos/60/g53.png" id="enemy_plant" class="gusano">
+  <img src="./img/gusanos/60/g54.png" id="enemy_plant" class="gusano">
+  <img src="./img/gusanos/60/g55.png" id="enemy_plant" class="gusano">
+  <img src="./img/gusanos/60/g56.png" id="enemy_plant" class="gusano">
+  <img src="./img/gusanos/60/g57.png" id="enemy_plant" class="gusano">
+  <img src="./img/gusanos/60/g58.png" id="enemy_plant" class="gusano">
+  <img src="./img/gusanos/60/g59.png" id="enemy_plant" class="gusano">
+  <img src="./img/gusanos/60/g60.png" id="enemy_plant" class="gusano">
+  <img src="./img/gusanos/60/g61.png" id="enemy_plant" class="gusano">
+  <img src="./img/gusanos/60/g62.png" id="enemy_plant" class="gusano">
+  <img src="./img/gusanos/60/g63.png" id="enemy_plant" class="gusano">
+  <img src="./img/gusanos/60/g64.png" id="enemy_plant" class="gusano">
+  <img src="./img/gusanos/60/g65.png" id="enemy_plant" class="gusano">
+  <img src="./img/gusanos/60/g66.png" id="enemy_plant" class="gusano">
+  <img src="./img/gusanos/60/g67.png" id="enemy_plant" class="gusano">
+  <img src="./img/gusanos/60/g68.png" id="enemy_plant" class="gusano">
+  <img src="./img/gusanos/60/g69.png" id="enemy_plant" class="gusano">
+  <img src="./img/gusanos/60/g70.png" id="enemy_plant" class="gusano">
+
+  <img src="./img/enemies/enemy_spider_big.png" id="enemy_spider_big">
+  <img src="./img/fire.png" id="fire">
+  <img src="./img/boom.png" id="collitionAnimation">
+
+  <script src="./js/all.min.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+
+</html>

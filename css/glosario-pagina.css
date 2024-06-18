@@ -1,0 +1,620 @@
+/* @import url(https://fonts.googleapis.com/css?family=Lato:400,700,900);
+*, *:before, *:after {
+  box-sizing: border-box;
+} */
+
+/* @font-face {
+  font-family: "poppi";
+  src: url(../font/Poppins-Light.ttf);
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'poppi', sans-serif;
+} */
+body {
+  background: linear-gradient(to bottom, #8c7a7a 0%, #af877c 65%, #af877c 100%) fixed;
+  background: url("https://i.pinimg.com/564x/43/eb/59/43eb5900d6f5523eef6405d440ba6922.jpg")  
+}
+
+
+.slide-container{
+  margin: auto;
+  width: 600px;
+  height: 100vh;
+  max-height: 100vh;
+  text-align: center;
+}
+
+::selection{
+  color: #fff;
+}
+.wrapper{
+  width: 370px;
+  margin: 40px auto;
+}
+.select-btn, li{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.select-btn{
+  height: 65px;
+  padding: 0 20px;
+  font-size: 22px;
+  background: #fff;
+  border-radius: 7px;
+  justify-content: space-between;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+.select-btn i{
+  font-size: 31px;
+  transition: transform 0.3s linear;
+}
+.wrapper.active .select-btn i{
+  transform: rotate(-180deg);
+}
+.content{
+  display: none;
+  padding: 20px;
+  margin-top: 15px;
+  background: #fff;
+  border-radius: 7px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+.wrapper.active .content{
+  display: block;
+}
+.content .search{
+  position: relative;
+}
+.search i{
+  top: 50%;
+  left: 15px;
+  color: #999;
+  font-size: 20px;
+  pointer-events: none;
+  transform: translateY(-50%);
+  position: absolute;
+}
+.search input{
+  height: 50px;
+  width: 100%;
+  outline: none;
+  font-size: 17px;
+  border-radius: 5px;
+  padding: 0 20px 0 43px;
+  border: 1px solid #B3B3B3;
+}
+.search input:focus{
+  padding-left: 42px;
+  
+}
+.search input::placeholder{
+  color: #bfbfbf;
+}
+.content .options{
+  margin-top: 10px;
+  max-height: 250px;
+  overflow-y: auto;
+  padding-right: 7px;
+}
+.options::-webkit-scrollbar{
+  width: 7px;
+}
+.options::-webkit-scrollbar-track{
+  background: #f1f1f1;
+  border-radius: 25px;
+}
+.options::-webkit-scrollbar-thumb{
+  background: #ccc;
+  border-radius: 25px;
+}
+.options::-webkit-scrollbar-thumb:hover{
+  background: #b3b3b3;
+}
+.options li{
+  height: 50px;
+  padding: 0 13px;
+  font-size: 21px;
+}
+.options li:hover, li.selected{
+  border-radius: 5px;
+  background: #f2f2f2;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.clash-card {
+  background: white;
+  width: 300px;
+  display: inline-block;
+  margin: auto;
+  border-radius: 19px;
+  position: relative;
+  text-align: center;
+  box-shadow: -1px 15px 30px -12px black;
+  z-index: 9999;
+}
+
+.clash-card__image {
+  position: relative;
+  height: 255px;
+  margin-bottom: 35px;
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+}
+
+.clash-card__image {
+  background: url("../img/background\ baby\ blue.jpg");
+  height: 254px;
+}
+
+
+.clash-card__image--barbarian--matematica img {
+  width: 350px;
+  position: absolute;
+  top: -107px;
+  left: -25px;
+}
+
+.clash-card__image--barbarian--suma img {
+  width: 350px;
+  position: absolute;
+  top: -107px;
+  left: -25px;
+}
+
+
+.clash-card__image--barbarian--resta img {
+  width: 370px;
+  position: absolute;
+  top: -127px;
+  left: -20px;
+}
+
+
+.clash-card__image--barbarian--multiplicacion img {
+  width: 355px;
+  position: absolute;
+  top: -112px;
+  left: -22px;
+}
+
+
+.clash-card__image--barbarian--propiedad img {
+  width: 340px;
+  position: absolute;
+  top: -98px;
+  left: -22px;
+}
+
+
+.clash-card__image--barbarian--asociativa img {
+  width: 355px;
+  position: absolute;
+  top: -112px;
+  left: -15px;
+}
+
+
+.clash-card__image--barbarian--conmutativa img {
+  width: 335px;
+  position: absolute;
+  top: -92px;
+  left: -15px;
+}
+
+
+.clash-card__image--barbarian--distributiva img {
+  width: 333px;
+  position: absolute;
+  top: -89px;
+  left: -15px;
+}
+
+
+.clash-card__image--barbarian--elemento-neutro img {
+  width: 333px;
+  position: absolute;
+  top: -89px;
+  left: -20px;
+}
+
+
+.clash-card__image--barbarian--division img {
+  width: 380px;
+  position: absolute;
+  top: -137px;
+  left: -25px;
+}
+ 
+
+
+ .clash-card__image--barbarian--dividendo img {
+  width: 385px;
+  position: absolute;
+  top: -143px;
+  left: -45px;
+}
+
+
+.clash-card__image--barbarian--divisor img {
+  width: 385px;
+  position: absolute;
+  top: -143px;
+  left: -45px;
+}
+
+
+.clash-card__image--barbarian--cociente img {
+  width: 385px;
+  position: absolute;
+  top: -143px;
+  left: -50px;
+}
+
+
+.clash-card__image--barbarian--resto img {
+  width: 385px;
+  position: absolute;
+  top: -143px;
+  left: -45px;
+}
+
+
+/* .clash-card__image--barbarian--numeros img {
+  width: 300px;
+  position: absolute;
+  top: -143px;
+  left: -45px;
+} */
+
+
+.clash-card__image--barbarian--numeros img {
+  width: 352px;
+  position: absolute;
+  top: -109px;
+  left: -20px;
+}
+
+.clash-card__image--barbarian--naturales img {
+  width: 352px;
+  position: absolute;
+  top: -109px;
+  left: -20px;
+}
+
+
+.clash-card__image--barbarian--numeros-naturales img {
+  width: 352px;
+  position: absolute;
+  top: -109px;
+  left: -20px;
+}
+
+
+.clash-card__image--barbarian--enteros img {
+  width: 351px;
+  position: absolute;
+  top: -107px;
+  left: -25px;
+}
+
+
+.clash-card__image--barbarian--numeros-enteros img {
+  width: 351px;
+  position: absolute;
+  top: -107px;
+  left: -25px;
+}
+
+
+.clash-card__image--barbarian--conjunto img {
+  width: 351px;
+  position: absolute;
+  top: -107px;
+  left: -25px;
+}
+
+
+.clash-card__image--barbarian--conjunto-de-numeros-naturales img {
+  width: 351px;
+  position: absolute;
+  top: -107px;
+  left: -30px;
+}
+
+
+.clash-card__image--barbarian--conjunto-de-numeros-enteros img {
+  width: 351px;
+  position: absolute;
+  top: -107px;
+  left: -35px;
+}
+
+
+.clash-card__image--barbarian--conjunto-de-numeros-q img {
+  width: 351px;
+  position: absolute;
+  top: -107px;
+  left: -35px;
+}
+
+
+.clash-card__image--barbarian--conjunto-de-numeros-irracionales img {
+  width: 351px;
+  position: absolute;
+  top: -108px;
+  left: -35px;
+}
+
+
+.clash-card__image--barbarian--conjunto-de-numeros-reales img {
+  width: 351px;
+  position: absolute;
+  top: -107px;
+  left: -25px;
+}
+
+.clash-card__image--barbarian--par img {
+  width: 351px;
+  position: absolute;
+  top: -107px;
+  left: -35px;
+}
+
+
+.clash-card__image--barbarian--impar img {
+  width: 351px;
+  position: absolute;
+  top: -107px;
+  left: -35px;
+}
+
+
+.clash-card__image--barbarian--igual img {
+  width: 351px;
+  position: absolute;
+  top: -107px;
+  left: -30px;
+}
+
+
+.clash-card__image--barbarian--diferente img {
+  width: 351px;
+  position: absolute;
+  top: -107px;
+  left: -25px;
+}
+
+
+.clash-card__image--barbarian--decimal img {
+  width: 365px;
+  position: absolute;
+  top: -122px;
+  left: -45px;
+}
+
+
+.clash-card__image--barbarian--mayor-que img {
+  width: 365px;
+  position: absolute;
+  top: -122px;
+  left: -40px;
+}
+
+
+.clash-card__image--barbarian--menor-que img {
+  width: 365px;
+  position: absolute;
+  top: -122px;
+  left: -45px;
+}
+
+
+.clash-card__image--barbarian--fraccion img {
+  width: 365px;
+  position: absolute;
+  top: -122px;
+  left: -50px;
+}
+
+
+.clash-card__image--barbarian--numerador img {
+  width: 365px;
+  position: absolute;
+  top: -122px;
+  left: -40px;
+}
+
+
+.clash-card__image--barbarian--denominador img {
+  width: 365px;
+  position: absolute;
+  top: -122px;
+  left: -38px;
+}
+
+
+.clash-card__image--barbarian--raiz img {
+  width: 375px;
+  position: absolute;
+  top: -132px;
+  left: -45px;
+}
+
+
+.clash-card__image--barbarian--ecuacion img {
+  width: 400px;
+  position: absolute;
+  top: -158px;
+  left: -45px;
+}
+
+
+.clash-card__image--barbarian--despeje img {
+  width: 395px;
+  position: absolute;
+  top: -153px;
+  left: -35px;
+}
+
+
+.clash-card__image--barbarian--sustitucion img {
+  width: 395px;
+  position: absolute;
+  top: -153px;
+  left: -40px;
+}
+
+
+.clash-card__image--barbarian--potenciacion img {
+  width: 395px;
+  position: absolute;
+  top: -153px;
+  left: -50px;
+}
+
+
+.clash-card__image--barbarian--exponente img {
+  width: 395px;
+  position: absolute;
+  top: -153px;
+  left: -50px;
+}
+
+
+.clash-card__image--barbarian--base img {
+  width: 395px;
+  position: absolute;
+  top: -153px;
+  left: -50px;
+}
+
+
+
+
+.numeradorimg{
+  object-fit: contain;
+  z-index: -1;
+  align-content: center;
+  margin-right: 0px;
+  width: 250px ;
+  height: auto;
+}
+
+
+.dividendoimg{
+  object-fit: contain;
+  z-index: -1;
+  align-content: center;
+  margin-right: 0px;
+  width: 250px ;
+  height: 100;
+}
+
+
+
+
+
+
+.clash-card__unit-name {
+  font-size: 26px;
+  color: black;
+  font-weight: 900;
+  margin-bottom: 5px;
+}
+
+.clash-card__unit-description {
+  padding: 20px;
+  margin-bottom: 10px;
+  height: auto !important;
+  word-wrap: break-word;
+  text-align:justify;
+
+}
+
+.clash-card__unit-stats--barbarian {
+  background: #737fcb;
+}
+.clash-card__unit-stats--barbarian .one-third {
+  border-right: 1px solid #BD7C2F;
+}
+
+
+
+.clash-card__unit-stats {
+  color: white;
+  font-weight: 700;
+  border-bottom-left-radius: 14px;
+  border-bottom-right-radius: 14px;
+}
+.clash-card__unit-stats .one-third {
+  width: 33%;
+  float: left;
+  padding: 20px 15px;
+}
+.clash-card__unit-stats sup {
+  position: absolute;
+  bottom: 4px;
+  font-size: 45%;
+  margin-left: 2px;
+}
+.clash-card__unit-stats .stat {
+  position: relative;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.clash-card__unit-stats .stat-value {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 12px;
+}
+.clash-card__unit-stats .no-border {
+  border-right: none;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+.slick-prev {
+  left: 100px;
+  z-index: 999;
+}
+
+.slick-next {
+  right: 100px;
+  z-index: 999;
+}
+
+.potencia-glosario{
+  margin-right: 0;
+  width: 260px;
+}
+
+.exponente-glosario{
+  margin-right: 0;
+  width: 255px;
+}

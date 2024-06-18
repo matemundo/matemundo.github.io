@@ -1,0 +1,200 @@
+@font-face {
+  font-family: "roboto";
+  src: url(../font/RobotoCondensed-Medium.ttf);
+}
+
+
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background: url("https://i.pinimg.com/236x/f9/e4/28/f9e428eddcea0d14fafafc2b5a65c3d7.jpg");
+}
+
+.container {
+  padding:  0;
+  margin: 30px auto 0px;
+  width: 1140px;
+  color: rgb(189, 193, 194);
+  
+}
+
+.info{
+ color: black;
+ z-index: -1;
+}
+
+h1 {
+  position: relative;
+  margin-bottom: 15px;
+  font-family: "Oswald", sans-serif;
+  font-size: 44px;
+  text-transform: uppercase;
+  color: #424242;
+  background-color: #424242;
+  text-orientation: upright ;
+}
+
+h2{
+  font-family: roboto;
+  font-size: 60px;
+}
+
+.interprete{
+  font-size: 30px;
+  justify-content: center;
+}
+
+
+.mark1{
+ background-color: #ccc3c7a6;
+
+}
+
+.mark2{
+  background-color: #ccc3c7a6;
+ }
+ 
+ .mark3{
+  background-color: #ccc3c7a6  ;
+ }
+
+ .mark4{
+  background-color: #ccc3c7a6 ;
+ }
+
+ .mark5{
+  background-color: #ccc3c7a6 ;
+ }
+ 
+ .mark6{
+  background-color: #ccc3c7a6 ;
+ }
+
+ p{
+  text-align: justify;
+  
+ }
+
+
+.gallery-wrap {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 70vh;
+  position:relative;
+  background-color: #424242;
+  
+}
+
+.item {
+  flex: 1;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: none;
+  transition: all 600ms ease-in-out 200ms;
+}
+
+.item h2{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  writing-mode:vertical-rl;
+  rotate: 180deg;
+  left: 0;
+  right: 0;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-weight:400;
+  opacity: 1;
+  transition: all 500ms ease;
+}
+
+/* .item:hover h2{
+  display: none;
+} */
+
+/* .item-1:hover {
+  flex: 100;
+  filter: blur(4px);
+  -webkit-filter: blur(4px);
+  
+}
+
+.item:hover + .text-1 {
+  display: block;
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0, 0.4); 
+  color: white;
+} */
+
+
+.item-1 {
+  background-image: url("../img/matemundo-info-1.jpg");
+  background-position:initial;
+}
+
+
+.texto{
+  display: none;
+  position: absolute;
+  left: 0;
+  width: auto;
+  margin-top:20px;
+  height: calc(100%/2);
+  pointer-events: none;
+  backdrop-filter: blur(10px);
+  /* transition: all 500ms ease-in-out 500ms; */
+  transition: all 500ms ease-in-out 500ms;
+}
+.texto p {
+  margin: 0px 20px 10px;
+  font-size: 1.2em;
+  text-align: justify;
+}
+
+
+.textoshow{
+  display: block;
+  background-color: rgb(0,0,0); 
+  background-color: rgba(1, 1, 1, 0.79); 
+  color: white;
+  z-index: 10;
+  height: 440px;
+}
+
+
+
+
+.item-2 {
+  background-image: url("../img/videos3.jpg");
+}
+
+.item-3 {
+  background-image: url("../img/glosario-info-2.jpg");
+}
+
+.item-4 {
+  background-image: url("../img/juegos.infor.jpg")
+}
+
+.item-5 {
+  background-image: url("../img/MateMundo\ mapache\ de\ ejercicios.png");
+}
+
+.item-6{
+    background-image: url("../img/colaboraadores-info.jpg");
+}
+
+
+
+.open-item{
+  flex: 100;
+  filter: blur(6px);
+  -webkit-filter: blur(6px);
+}

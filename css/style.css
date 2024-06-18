@@ -1,0 +1,133 @@
+@font-face {
+  font-family: "a";
+  src: url(../font/autoradiographic\ rg.otf);
+}
+/* .carouselExampleIndicators{ */
+  /* height: calc(100% - 56px) !important ; */
+/* } */
+
+@font-face {
+  font-family: "gGuarantee";
+  src: url(../font/gGuarantee.ttf);
+}
+
+.carousel-item{
+    height: calc(100vh - 56px) !important;
+    width: 100%; /* Esto hace que cada ítem del carrusel tenga el ancho de la pantalla completa */
+}
+
+.carousel-item img {
+    height: 100%; /* Esto hace que la imagen ocupe toda la altura de su contenedor */
+    width: auto; /* Esto hace que la imagen ocupe todo el ancho de su contenedor */
+    object-fit: cover; /* Esto hace que la imagen se redimensione para llenar su contenedor manteniendo su aspecto */
+}
+.carousel-indicators{
+  z-index: 10;
+}
+
+.buttonColorglosario{
+    background-color: rgb(61, 33, 122)!important;
+}
+
+.buttonColorjuegos{
+  background-color: #00ffd5 !important;
+}
+
+
+.buttonPosition{
+ position: absolute!important;
+ bottom: 300px!important;
+}
+
+/* .juegos_img{ */
+/*     /* max-height: max-content !important; */ */
+/*     /* max-width: max-content !important; */ */
+/* } */
+
+/* .glosario_img{ */
+/*     max-height: max-content !important; */
+/*     max-width: max-content !important; */
+/* } */
+
+.video_img{
+    max-height: max-content !important;
+    max-width: max-content !important;
+}
+
+.ejercicios_img{
+    /* max-height: max-content !important; */
+    /* max-width: max-content !important; */
+  max-width: 100vw;
+  height: 100vh;
+}
+
+.canvas {
+    background: #060e1b;
+    opacity: 0.5;
+    position: relative;
+    z-index: 1 !important;
+}
+
+
+#juegos_img{
+   display: block;
+   position: absolute;
+   z-index: 5 !important;
+   top: 0;
+   max-width: max-content ;
+   max-width: max-content;
+}
+
+.next-z {
+  z-index: 6 !important;
+}
+.prev-z {
+  z-index: 6 !important;
+}
+
+
+
+.blowingbutton{
+  position: relative;
+  height: 60px;
+  width: 200px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 18px;
+  font-family: 'Raleway', sans-serif;
+  z-index: 1;
+}
+.blowingbutton::before{
+  position: absolute;
+  content: '';
+  top: -2px;
+  left: -2px;
+  height: calc(100% + 4px);
+  width: calc(100% + 4px);
+  border-radius: 5px;
+  z-index: -1;
+  opacity: 0;
+  filter: blur(5px);
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  background-size: 400%;
+  transition: opacity .3s ease-in-out;
+  animation: bloanimate 20s linear infinite;
+}
+.blowingbutton:hover::before{
+  opacity: 0;
+}
+.blowingbutton:hover:active{
+  background: none;
+}
+.blowingbutton:hover:active::before{
+  filter: blur(2px);
+}
+@keyframes bloanimate {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
+
