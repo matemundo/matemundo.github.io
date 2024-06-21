@@ -141,7 +141,6 @@ h2{
 
 
 .texto{
-  display: none;
   position: absolute;
   left: 0;
   width: auto;
@@ -149,8 +148,9 @@ h2{
   height: calc(100%/2);
   pointer-events: none;
   backdrop-filter: blur(10px);
-  /* transition: all 500ms ease-in-out 500ms; */
-  transition: all 500ms ease-in-out 500ms;
+  opacity: 0;
+  display:none;
+  animation: fadeInOut 0.6s ease-in-out;
 }
 .texto p {
   margin: 0px 20px 10px;
@@ -160,6 +160,7 @@ h2{
 
 
 .textoshow{
+  opacity: 1;
   display: block;
   background-color: rgb(0,0,0); 
   background-color: rgba(1, 1, 1, 0.79); 
@@ -192,6 +193,22 @@ h2{
 }
 
 
+@keyframes fadeInOut { 
+    0% { 
+        opacity: 0; 
+        display: none; 
+    } 
+  
+    50% { 
+        opacity: 0.5; 
+        display: block; 
+    } 
+  
+    100% { 
+        opacity: 1; 
+        display: block; 
+    } 
+}
 
 .open-item{
   flex: 100;
